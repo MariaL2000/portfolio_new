@@ -5,6 +5,7 @@ export default function ThreeBackground() {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    // Escena y cámara
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -12,16 +13,16 @@ export default function ThreeBackground() {
       0.1,
       1000
     );
-
-    const renderer = new THREE.WebGLRenderer({ alpha: true }); // transparente
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x000000, 0); // fondo transparente
-    mountRef.current.appendChild(renderer.domElement);
-
     camera.position.z = 5;
 
-    // estrellas
+    // Renderer con fondo transparente
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0); // negro transparente
+    mountRef.current.appendChild(renderer.domElement);
+
+    // Estrellas
     const starGeometry = new THREE.BufferGeometry();
     const starCount = window.innerWidth < 768 ? 600 : 1500; // menos en mobile
     const starPosition = new Float32Array(starCount * 3);
@@ -32,14 +33,11 @@ export default function ThreeBackground() {
       "position",
       new THREE.BufferAttribute(starPosition, 3)
     );
-    const starMaterial = new THREE.PointsMaterial({
-      color: 0xffffff,
-      size: 0.1,
-    });
+    const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.1 });
     const starField = new THREE.Points(starGeometry, starMaterial);
     scene.add(starField);
 
-    // parallax
+    // Parallax con mouse
     const handleMouseMove = (event) => {
       const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
       const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -48,7 +46,7 @@ export default function ThreeBackground() {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    // resize
+    // Responsividad
     const handleResize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -58,7 +56,7 @@ export default function ThreeBackground() {
     };
     window.addEventListener("resize", handleResize);
 
-    // render loop
+    // Loop de animación
     const animate = () => {
       requestAnimationFrame(animate);
       starField.rotation.x += 0.001;
@@ -67,13 +65,11 @@ export default function ThreeBackground() {
     };
     animate();
 
-    // cleanup
+    // Cleanup para evitar memory leaks
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", handleResize);
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
-      }
+      if (mountRef.current) mountRef.current.removeChild(renderer.domElement);
       renderer.dispose();
       starGeometry.dispose();
       starMaterial.dispose();
