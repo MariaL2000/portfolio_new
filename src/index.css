@@ -43,9 +43,13 @@ img {
 }
 
 
+body, html {
+  background-color: #000; /* negro oscuro */
+  margin: 0;
+  padding: 0;
+}
 canvas {
-  background: transparent !important;
-  display: block;
+  display: block; /* elimina gaps */
 }
 
 

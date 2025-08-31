@@ -15,23 +15,23 @@ export default function ThreeBackground() {
     );
     camera.position.z = 5;
 
-    // Renderer con fondo transparente
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    // Renderer con fondo negro opaco
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x000000, 0); // negro transparente
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // limitar para móviles
+    renderer.setClearColor(0x000000, 1); // negro opaco
     mountRef.current.appendChild(renderer.domElement);
 
-    // Estrellas
+    // Crear estrellas
     const starGeometry = new THREE.BufferGeometry();
     const starCount = window.innerWidth < 768 ? 600 : 1500; // menos en mobile
-    const starPosition = new Float32Array(starCount * 3);
+    const starPositions = new Float32Array(starCount * 3);
     for (let i = 0; i < starCount * 3; i++) {
-      starPosition[i] = (Math.random() - 0.5) * 100;
+      starPositions[i] = (Math.random() - 0.5) * 100;
     }
     starGeometry.setAttribute(
       "position",
-      new THREE.BufferAttribute(starPosition, 3)
+      new THREE.BufferAttribute(starPositions, 3)
     );
     const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.1 });
     const starField = new THREE.Points(starGeometry, starMaterial);
