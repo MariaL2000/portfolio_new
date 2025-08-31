@@ -130,6 +130,7 @@ function HeroSection() {
               <img
                 src="/heroPic.jpg"
                 alt="Hero Pic"
+                loading="lazy"
                 className="relative z-10 rounded-full shadow-2xl transform transition-transform duration-500 ease-in-out hover:scale-110"
                 style={{
                   width: "99%",

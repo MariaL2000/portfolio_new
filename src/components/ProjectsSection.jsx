@@ -52,7 +52,7 @@ const Carousel = () => {
         </button>
 
         {/* Card principal */}
-        <article className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center z-20">
+        <article className="relative w-full min-h-[400px] md:h-[700px] flex items-center justify-center z-20">
           <AnimatePresence initial={false}>
             {projects.map(
               (project, index) =>
@@ -67,7 +67,7 @@ const Carousel = () => {
                       type: "spring",
                       bounce: 0.3,
                     }}
-                    className="absolute w-[90%] md:w-[70%] lg:w-[60%] h-full rounded-3xl text-white shadow-lg flex flex-col overflow-hidden"
+                    className="absolute w-[90%] md:w-[70%] lg:w-[60%] rounded-3xl text-white shadow-lg flex flex-col overflow-hidden"
                     style={{
                       background:
                         "linear-gradient(to bottom right, var(--color-neon-pink), var(--secondary))",
@@ -75,14 +75,15 @@ const Carousel = () => {
                       zIndex: 20,
                     }}
                   >
-                    {/* Imagen ocupa más espacio */}
+                    {/* Imagen optimizada con lazy loading */}
                     <img
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-[350px] md:h-[450px] lg:h-[500px] object-cover"
+                      loading="lazy"
+                      className="w-full h-[250px] md:h-[450px] lg:h-[500px] object-cover"
                     />
 
-                    <div className="flex-1 p-4 md:p-6 flex flex-col">
+                    <div className="p-4 md:p-6 flex flex-col">
                       {/* Título */}
                       <h2
                         className="uppercase text-xl md:text-2xl font-semibold text-transparent bg-clip-text"
@@ -95,12 +96,12 @@ const Carousel = () => {
                       </h2>
 
                       {/* Descripción */}
-                      <p className="text-sm md:text-base mt-2 flex-1">
+                      <p className="text-sm md:text-base mt-2">
                         {project.descripcion}
                       </p>
 
-                      {/* Stack flotante */}
-                      <div className="flex flex-wrap gap-2 mt-4">
+                      {/* Stack */}
+                      <div className="flex flex-wrap gap-2 mt-3">
                         {project.stack.map((tech, i) => (
                           <span
                             key={i}
@@ -115,7 +116,7 @@ const Carousel = () => {
                         ))}
                       </div>
 
-                      {/* Botón moderno */}
+                      {/* Botón */}
                       {project.url && (
                         <a
                           href={project.url}
@@ -142,3 +143,4 @@ const Carousel = () => {
 };
 
 export default Carousel;
+

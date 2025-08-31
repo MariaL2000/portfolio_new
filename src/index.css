@@ -43,6 +43,11 @@ img {
 }
 
 
+canvas {
+  background: transparent !important;
+  display: block;
+}
+
 
 
 body::-webkit-scrollbar-track{
