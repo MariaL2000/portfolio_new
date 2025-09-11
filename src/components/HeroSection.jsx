@@ -9,20 +9,21 @@ function HeroSection() {
       <header
         className="hidden md:block absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full opacity-20 blur-[100px] left-10 top-1/2 -translate-y-1/2 z-0"
         style={{
-          background: "linear-gradient(to right, #0007cd, #785aa4, var(--primary))",
+          background:
+            "linear-gradient(to right, #0007cd, #785aa4, var(--primary))",
         }}
       />
       <header
         className="hidden md:block absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full opacity-20 blur-[100px] right-10 top-1/2 -translate-y-1/2 z-0"
         style={{
-          background: "linear-gradient(to right, #0007cd, #785aa4, var(--primary))",
+          background:
+            "linear-gradient(to right, #0007cd, #785aa4, var(--primary))",
         }}
       />
 
       {/* Contenedor principal */}
       <section className="w-full px-5 sm:px-8 md:px-12 lg:px-0 max-w-screen-lg lg:max-w-screen-xl mx-auto relative z-10">
         <article className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start pt-12 lg:pt-24">
-
           {/* Información personal + redes sociales */}
           <section className="flex flex-col justify-start space-y-4 sm:space-y-6 md:space-y-8 relative">
             <div className="flex items-start gap-4 sm:gap-6">
@@ -70,7 +71,7 @@ function HeroSection() {
                     Hire Me
                   </a>
                   <motion.a
-                    href="/resume.pdf"
+                    href="/CV.pdf"
                     download
                     whileHover={{ scale: 1.05 }}
                     className="flex items-center px-3 py-2 sm:px-4 sm:py-2.5 border rounded-3xl text-primary border-primary"
@@ -92,7 +93,9 @@ function HeroSection() {
                         animate="animate"
                       />
                     </svg>
-                    <span className="text-sm sm:text-base">Download Resume</span>
+                    <span className="text-sm sm:text-base">
+                      Download Resume
+                    </span>
                   </motion.a>
                 </div>
               </div>

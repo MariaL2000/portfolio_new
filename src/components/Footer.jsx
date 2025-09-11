@@ -1,5 +1,5 @@
 import React from "react";
-import { socialIcons } from "./data/config"; 
+import { socialIcons } from "./data/config";
 
 const Footer = () => {
   return (
@@ -15,7 +15,8 @@ const Footer = () => {
           href="mailto:mariamarreromedrano@gmail.com"
           className="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-white transition hover:scale-105"
           style={{
-            background: "linear-gradient(to right, var(--primary), var(--secondary))",
+            background:
+              "linear-gradient(to right, var(--primary), var(--secondary))",
           }}
         >
           Hire Me
@@ -26,13 +27,15 @@ const Footer = () => {
       <header
         className="hidden md:block absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full opacity-20 blur-[100px] left-10 top-1/2 -translate-y-1/2 z-0"
         style={{
-          background: "linear-gradient(to right, var(--primary), var(--secondary), #785aa4)",
+          background:
+            "linear-gradient(to right, var(--primary), var(--secondary), #785aa4)",
         }}
       />
       <header
         className="hidden md:block absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full opacity-20 blur-[100px] right-10 top-1/2 -translate-y-1/2 z-0"
         style={{
-          background: "linear-gradient(to right, var(--primary), var(--secondary), #0007cd)",
+          background:
+            "linear-gradient(to right, var(--primary), var(--secondary), #0007cd)",
         }}
       />
 
@@ -41,7 +44,7 @@ const Footer = () => {
         {/* Correo y ubicación */}
         <div className="flex flex-col items-center md:items-start">
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:mariamarreromedrano@gmail.com"
             className="text-white font-medium text-lg md:text-xl transition hover:text-[var(--primary)]"
           >
             mariamarreromedrano@gmail.com
@@ -61,7 +64,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white w-8 h-8 md:w-10 md:h-10 transition hover:text-[var(--primary)]"
             >
-              <svg viewBox={icon.viewBox} fill="currentColor" className="w-full h-full">
+              <svg
+                viewBox={icon.viewBox}
+                fill="currentColor"
+                className="w-full h-full"
+              >
                 <path d={icon.path} />
               </svg>
             </a>
