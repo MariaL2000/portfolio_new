@@ -57,53 +57,12 @@ function HeroSection() {
                   code. Passionate about responsive design, user experience, and
                   delivering solutions that make an impact.
                 </p>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-4 sm:mt-6">
-                  <a
-                    href="mailto:mariamarreromedrano@gmail.com"
-                    className="px-5 py-2 sm:px-6 sm:py-3 text-white font-semibold rounded-3xl hover:scale-105 transform transition-transform duration-300"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to right, var(--primary), var(--secondary))",
-                    }}
-                  >
-                    Hire Me
-                  </a>
-                  <motion.a
-                    href="/CV.pdf"
-                    download
-                    whileHover={{ scale: 1.05 }}
-                    className="flex items-center px-3 py-2 sm:px-4 sm:py-2.5 border rounded-3xl text-primary border-primary"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      width={20}
-                      height={20}
-                      className="mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <motion.path
-                        d="M12 16l4-5h-3V4h-2v7H8l4 5zM5 20h14v-2H5v2z"
-                        fill="var(--primary)"
-                        stroke="var(--primary)"
-                        strokeWidth={1}
-                        variants={variants}
-                        initial="initial"
-                        animate="animate"
-                      />
-                    </svg>
-                    <span className="text-sm sm:text-base">
-                      Download Resume
-                    </span>
-                  </motion.a>
-                </div>
               </div>
             </div>
           </section>
 
-          {/* Hero image circular */}
-          <figure className="flex justify-center lg:justify-end mt-6 lg:mt-0">
+          {/* Hero image circular + botones centrados en móviles */}
+          <figure className="flex flex-col items-center lg:justify-end mt-6 lg:mt-0">
             <motion.div
               initial={false}
               className="w-[220px] sm:w-[280px] md:w-[350px] lg:w-[400px] h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex justify-center items-center p-6 sm:p-10 rounded-full overflow-hidden relative"
@@ -142,6 +101,45 @@ function HeroSection() {
                 }}
               />
             </motion.div>
+
+            {/* CTA Buttons centrados debajo de la imagen */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-4">
+              <a
+                href="mailto:mariamarreromedrano@gmail.com"
+                className="px-5 py-2 sm:px-6 sm:py-3 text-white font-semibold rounded-3xl hover:scale-105 transform transition-transform duration-300"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to right, var(--primary), var(--secondary))",
+                }}
+              >
+                Hire Me
+              </a>
+              <motion.a
+                href="/CV.pdf"
+                download
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center px-3 py-2 sm:px-4 sm:py-2.5 border rounded-3xl text-primary border-primary"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <motion.path
+                    d="M12 16l4-5h-3V4h-2v7H8l4 5zM5 20h14v-2H5v2z"
+                    fill="var(--primary)"
+                    stroke="var(--primary)"
+                    strokeWidth={1}
+                    variants={variants}
+                    initial="initial"
+                    animate="animate"
+                  />
+                </svg>
+                <span className="text-sm sm:text-base">Download Resume</span>
+              </motion.a>
+            </div>
           </figure>
         </article>
       </section>

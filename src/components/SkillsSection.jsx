@@ -49,14 +49,13 @@ const SkillCircle = ({ skill, percentage, icon }) => {
           className="text-base font-bold text-transparent bg-clip-text"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom right, var(--primary), var(--secondary))",
+              "linear-gradient(to bottom right, var(--white), var(--secondary))",
           }}
         >
           {percentage}%
         </motion.p>
       </div>
 
-   
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}

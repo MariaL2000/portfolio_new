@@ -90,7 +90,7 @@ export const skills = [
   },
   {
     skill: "Django & Flask & FastAPI",
-    percentage: 90,
+    percentage: 80,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
   },
   {
@@ -110,13 +110,13 @@ export const skills = [
   },
   {
     skill: "FastAPI",
-    percentage: 85,
+    percentage: 65,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
   },
 
   {
     skill: "Blender",
-    percentage: 65,
+    percentage: 45,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg",
   },
 ];
@@ -128,7 +128,7 @@ export const experience = [
     company: "Multiple enterprises",
     year: "2022 - Present",
     descripcion:
-      "Collaborating with businesses to build innovative web solutions.",
+      "Collaborating with businesses to build innovative and modern web solutions for clients .",
     icon: "./UCI2.webp",
   },
 ];
@@ -166,6 +166,36 @@ export const projects = [
 
   {
     id: 2,
+    title: "Harmony Shop",
+    descripcion:
+      "Headphones shop made with beautiful animations and a Hero made with Spline, the products are aleatory , it is just a frontend example of econmerce introducing products.",
+    url: "https://headphone-harmony.netlify.app/",
+
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Spline",
+      "Lucide React",
+      "Gsap",
+      "React Mouse Follower",
+      "React Intersection Observer",
+    ],
+    imageUrl: "/img/project33.png",
+  },
+
+  {
+    id: 3,
+    title: "Admin Dashboard #2",
+    descripcion:
+      "Admin dashboard made with React, Vite ,Tailwind and ReCharts. Prove it with username: admin , and password: admin123 .",
+    url: "https://marial2000.github.io/admin_client/",
+    stack: ["React", "Vite", "TailwindCss", "ReCharts", "Lucide-React"],
+    imageUrl: "img/admin1.png",
+  },
+
+  {
+    id: 4,
     title: "ProteoSearch",
     descripcion:
       "ProteoSearch is an advanced web-based platform designed for the interactive visualization and analysis of biomolecular structures. Leveraging real-time 3D rendering, it enables users to explore protein structures in detail, providing an intuitive interface for scientific analysis.",
@@ -180,29 +210,8 @@ export const projects = [
     ],
     imageUrl: "/img/project1.png",
   },
-
   {
-    id: 3,
-    title: "Harmony Shop",
-    descripcion:
-      "Headphones shop made with beautiful animations and a Hero made with Spline, the products are aleatory , it is just a frontend example of econmerce introducing products.",
-    url: "https://headphone-harmony.netlify.app/",
-
-    stack: [
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Spline",
-      "Lucide React",
-      "Gsap",
-      "React Mouse Follower",
-      "React intersection observer",
-    ],
-    imageUrl: "/img/project33.png",
-  },
-
-  {
-    id: 4,
+    id: 5,
     title: "Elite Custom Countertops",
     descripcion:
       "Elite-custom is a modern React + TypeScript web project designed for dynamic, responsive interfaces. It features smooth animations, interactive carousels, and accessible UI components, making it ideal for corporate sites or portfolios. The project emphasizes modularity, scalability, and a fast development workflow using Vite..",
@@ -221,23 +230,13 @@ export const projects = [
     imageUrl: "/img/project2.png",
   },
   {
-    id: 5,
+    id: 6,
     title: "CRYSPR System",
     descripcion:
       "A bioinformatics application made with Flask (Python) whose objective is to consult genomic data is a brief database in json format, the idea is that the user enters sequences of nitrogenous DNA bases and they are searched in the standard database and in another that contains possible DNA strands that present repairable mutations using the CRISPR Cas9 system. ",
     url: "https://github.com/MariaL2000/CRYSPR_System",
     stack: ["Python", "Flask", "HTML5", "CSS3"],
     imageUrl: "/img/project3.png",
-  },
-
-  {
-    id: 6,
-    title: "Marketing Website 1",
-    descripcion:
-      "Static marketing website deployed on GitHub Pages with AOS animations, always trying to make good sellers sites.",
-    url: "https://elitecustom.netlify.app/",
-    stack: ["HTML", "CSS", "Bootsrap", "AOS"],
-    imageUrl: "img/project66.png",
   },
 
   {
@@ -274,14 +273,5 @@ export const projects = [
       "Goggle-auth",
     ],
     imageUrl: "img/project88.png",
-  },
-  {
-    id: 9,
-    title: "Marketing Website",
-    descripcion:
-      "Static marketing website deployed on GitHub Pages with AOS animations, always trying to make good sellers sites.",
-    url: "https://marial2000.github.io/marketing_web1/",
-    stack: ["React", "Vite", "Bootsrap", "AOS"],
-    imageUrl: "img/project4.png",
   },
 ];
