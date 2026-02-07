@@ -89,7 +89,7 @@ export const skills = [
     icon: "https://www.svgrepo.com/show/374118/tailwind.svg",
   },
   {
-    skill: "Django & Flask & FastAPI",
+    skill: "Django",
     percentage: 80,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
   },
@@ -97,6 +97,31 @@ export const skills = [
     skill: "React",
     percentage: 80,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    skill: "Vite",
+    percentage: 90,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
+  },
+  {
+    skill: "Next.js",
+    percentage: 80,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    skill: "Prisma ORM",
+    percentage: 70,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+  },
+  {
+    skill: "TypeScript",
+    percentage: 80,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    skill: "Docker",
+    percentage: 70,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
   {
     skill: "SQL & PostgreSQL",
@@ -148,70 +173,25 @@ export const education = [
 export const projects = [
   {
     id: 1,
-    title: "The Gym Way",
+    title: "XHOP'DIT",
     descripcion:
-      "This is a minimalist site that efficiently and visually summarizes the most important exersices, which given University local situation can be perfomed by students in order to grow the fit community",
-    url: "https://thegymway.netlify.app/",
+      "Professional E-commerce platform focused on high-performance shopping experiences.",
+    url: "https://xhop-dit.vercel.app/",
 
     stack: [
-      "React",
-      "Vite",
+      "Next js",
       "TailwindCSS",
-      "Framer Motion",
-      "Mui Material",
+      "Vercel",
+      "Gemini AI sdk",
+      "Prisma",
+      "Supabase",
       "React-Icons",
     ],
-    imageUrl: "/img/project22.png",
+    imageUrl: "/img/xhopdit.png",
   },
 
   {
     id: 2,
-    title: "Harmony Shop",
-    descripcion:
-      "Headphones shop made with beautiful animations and a Hero made with Spline, the products are aleatory , it is just a frontend example of econmerce introducing products.",
-    url: "https://headphone-harmony.netlify.app/",
-
-    stack: [
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Spline",
-      "Lucide React",
-      "Gsap",
-      "React Mouse Follower",
-      "React Intersection Observer",
-    ],
-    imageUrl: "/img/project33.png",
-  },
-
-  {
-    id: 3,
-    title: "Admin Dashboard #2",
-    descripcion:
-      "Admin dashboard made with React, Vite ,Tailwind and ReCharts. Prove it with username: admin , and password: admin123 .",
-    url: "https://marial2000.github.io/admin_client/",
-    stack: ["React", "Vite", "TailwindCss", "ReCharts", "Lucide-React"],
-    imageUrl: "img/admin1.png",
-  },
-
-  {
-    id: 4,
-    title: "ProteoSearch",
-    descripcion:
-      "ProteoSearch is an advanced web-based platform designed for the interactive visualization and analysis of biomolecular structures. Leveraging real-time 3D rendering, it enables users to explore protein structures in detail, providing an intuitive interface for scientific analysis.",
-    url: "https://marial2000.github.io/ProteinVisual/",
-
-    stack: [
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Canvas, NCBI, UNIPROT API's",
-      "React-Icons",
-    ],
-    imageUrl: "/img/project1.png",
-  },
-  {
-    id: 5,
     title: "Elite Custom Countertops",
     descripcion:
       "Elite-custom is a modern React + TypeScript web project designed for dynamic, responsive interfaces. It features smooth animations, interactive carousels, and accessible UI components, making it ideal for corporate sites or portfolios. The project emphasizes modularity, scalability, and a fast development workflow using Vite..",
@@ -227,20 +207,86 @@ export const projects = [
       "Zod",
       "Axios",
     ],
-    imageUrl: "/img/project2.png",
+    imageUrl: "/img/elite.png",
   },
+
+  {
+    id: 3,
+    title: "The Gym Way",
+    descripcion:
+      "This is a minimalist site that efficiently and visually summarizes the most important exersices, which given University local situation can be perfomed by students in order to grow the fit community",
+    url: "https://thegymway.netlify.app/",
+
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Framer Motion",
+      "Mui Material",
+      "React-Icons",
+    ],
+    imageUrl: "/img/gymway.png",
+  },
+
+  {
+    id: 4,
+    title: "Harmony Shop",
+    descripcion:
+      "Headphones shop made with beautiful animations and a Hero made with Spline, the products are aleatory , it is just a frontend example of econmerce introducing products.",
+    url: "https://headphone-harmony.netlify.app/",
+
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Spline",
+      "Lucide React",
+      "Gsap",
+      "React Mouse Follower",
+      "React Intersection Observer",
+    ],
+    imageUrl: "/img/headphone.png",
+  },
+
+  {
+    id: 5,
+    title: "Admin Dashboard #2",
+    descripcion:
+      "Admin dashboard made with React, Vite ,Tailwind and ReCharts. Prove it with username: admin , and password: admin123 .",
+    url: "https://marial2000.github.io/admin_client/",
+    stack: ["React", "Vite", "TailwindCss", "ReCharts", "Lucide-React"],
+    imageUrl: "img/admin1.png",
+  },
+
   {
     id: 6,
+    title: "ProteoSearch",
+    descripcion:
+      "ProteoSearch is an advanced web-based platform designed for the interactive visualization and analysis of biomolecular structures. Leveraging real-time 3D rendering, it enables users to explore protein structures in detail, providing an intuitive interface for scientific analysis.",
+    url: "https://marial2000.github.io/ProteinVisual/",
+
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Canvas, NCBI, UNIPROT API's",
+      "React-Icons",
+    ],
+    imageUrl: "/img/proteosearch.png",
+  },
+
+  {
+    id: 7,
     title: "CRYSPR System",
     descripcion:
       "A bioinformatics application made with Flask (Python) whose objective is to consult genomic data is a brief database in json format, the idea is that the user enters sequences of nitrogenous DNA bases and they are searched in the standard database and in another that contains possible DNA strands that present repairable mutations using the CRISPR Cas9 system. ",
     url: "https://github.com/MariaL2000/CRYSPR_System",
     stack: ["Python", "Flask", "HTML5", "CSS3"],
-    imageUrl: "/img/project3.png",
+    imageUrl: "/img/crispr.png",
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Admin Dashboard",
     descripcion:
       "Scalable, secure, and visually appealing admin dashboard that can manage content, users, media, and analytics efficiently.",
@@ -254,11 +300,11 @@ export const projects = [
       "Django Colorfield",
       "Cloudinary",
     ],
-    imageUrl: "img/project5.png",
+    imageUrl: "img/djangoadmin.png",
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Complete FastApi example",
     descripcion:
       "Implementation of a system with Login, Sign in, Logout, a simple Goggle Oauth2 authentication and a CRUD complete for a admin and a econmerce.",
@@ -272,6 +318,6 @@ export const projects = [
       "SQLAlchemy",
       "Goggle-auth",
     ],
-    imageUrl: "img/project88.png",
+    imageUrl: "img/fastapi.png",
   },
 ];
