@@ -5,8 +5,9 @@ import NumberSection from "./components/NumberSection";
 import ServicesSection from "./components/ServicesSection"
 import SkillSection from "./components/SkillsSection";
 import Education from "./components/Education"
-import ProjectSection from "./components/ProjectsSection"
+import ProjectCarousel from "./components/ProjectCarousel"
 import Footer from "./components/Footer";
+import { projects , projects2} from "./components/data/config";
 const App = () => {
   return (
     <>
@@ -17,7 +18,8 @@ const App = () => {
     <ServicesSection/>
     <SkillSection/>
     <Education/>
-    <ProjectSection/>
+    <ProjectCarousel title="Main Projects" data={projects} isFirst={true} />
+    <ProjectCarousel title="Other Projects" data={projects2} />
     <Footer/>
     
     </>

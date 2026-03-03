@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { socialIcons } from "./data/config.js";
+import { useTheme } from "../provider/ThemeProvider";
 
 export default function SocialButtons() {
+  const { theme } = useTheme();
   const animationDuration = 4;
 
   const variants = {
@@ -18,35 +20,58 @@ export default function SocialButtons() {
       },
     },
     hover: {
-      scale: 1.1,
+      scale: 1.2,
       transition: { duration: 0.3 },
     },
   };
 
+  // Color adaptativo para los iconos
+  const iconColor = theme === "light" ? "var(--secondary)" : "var(--terciary)";
+
   return (
-    <div className="flex md:flex flex-col items-center justify-center space-y-11 bg-[#ffffff39] rounded-3xl border-primary max-h-[506px] md:max-h-[386px]">
+    <div
+      className={`
+        flex items-center justify-center
+        /* Móvil/Tablet: Horizontal y compacto */
+        flex-row space-x-6 px-6 py-3
+        /* Desktop (lg): Vertical y estilizado */
+        lg:flex-col lg:space-x-0 lg:space-y-8 lg:px-3 lg:py-8
+        /* Estilos comunes */
+        rounded-4xl border transition-all duration-300
+      `}
+      style={{
+        backgroundColor: theme === "light" ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.05)",
+        borderColor: "var(--glass-border)",
+        width: "fit-content"
+      }}
+    >
       {socialIcons.map((icon) => (
-        <a
+        <motion.a
           key={icon.id}
-          href={icon.url}           // <--- URL aquí
-          target="_blank"           // abrir en pestaña nueva
-          rel="noopener noreferrer" // seguridad
-          aria-label={icon.name}    // accesibilidad
-          className="inline-block"  // para que el link tome el tamaño del svg
+          href={icon.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={icon.name}
+          whileHover="hover"
+          className="flex items-center justify-center p-1"
         >
-          <svg viewBox={icon.viewBox} width={40} height={40}>
+          <svg
+            viewBox={icon.viewBox}
+            width={32}
+            height={32}
+            className="transition-all"
+          >
             <motion.path
               d={icon.path}
-              fill="var(--terciary)"
-              stroke="var(--terciary)"
+              fill={iconColor}
+              stroke={iconColor}
               strokeWidth={1}
               variants={variants}
               initial="initial"
               animate="animate"
-              whileHover="hover"
             />
           </svg>
-        </a>
+        </motion.a>
       ))}
     </div>
   );

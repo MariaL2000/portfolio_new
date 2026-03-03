@@ -2,10 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { Numbers } from "./data/config";
+import { useTheme } from "../provider/ThemeProvider";
 
 export default function NumberSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,66 +17,56 @@ export default function NumberSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.disconnect();
-      }
-    };
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="mx-auto w-full relative text-white mt-40 flex justify-center">
-      {/* Fondos difuminados */}
-      <header
-        className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full opacity-20 blur-[100px] left-10 top-1/2 -translate-y-1/2 hidden md:block z-0"
-        style={{
-          background: "linear-gradient(to right, #0007cd, #785aa4, var(--primary))",
-        }}
-      />
-      <header
-        className="absolute w-1/2 aspect-[16/5] -skew-x-12 rounded-full opacity-20 blur-[100px] right-10 top-1/2 -translate-y-1/2 hidden md:block z-0"
-        style={{
-          background: "linear-gradient(to right, #0007cd, #785aa4, var(--primary))",
-        }}
-      />
+    <section ref={sectionRef} className="w-full py-20 lg:py-32 flex justify-center">
+      <div className="container max-w-6xl px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
+          {Numbers.map((item, index) => (
+            <motion.article
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="relative flex flex-col items-center text-center group"
+            >
+              {/* Número: Fino y profesional */}
+              <header>
+                <h2
+                  className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tighter"
+                  style={{ color: theme === "light" ? "#111" : "#fff" }}
+                >
+                  {isVisible && (
+                    <CountUp start={0} end={item.number} duration={2.5} />
+                  )}
+                  <span className="text-[var(--primary)] ml-1">+</span>
+                </h2>
+              </header>
 
-      {/* Números */}
-      <motion.section
-        ref={sectionRef}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.5 }}
-        className="relative z-10 mx-auto w-11/12 lg:mx-0 p-5 sm:p-6 py-6 sm:py-8 rounded-3xl 
-                   border border-primary shadow-lg bg-secondary
-                   md:divide-x divide-primary grid grid-cols-2 md:grid-cols-4 
-                   gap-4 md:gap-6 lg:gap-12"
-      >
-        {Numbers.map((item) => (
-          <article key={item.id} className="text-center">
-            <header>
-              <h2 className="font-semibold text-xl sm:text-2xl md:text-4xl">
-                +{isVisible && (
-                  <CountUp
-                    start={0}
-                    end={item.number}
-                    duration={2}
-                    separator=","
-                  />
-                )}
-              </h2>
-            </header>
-            <p className="mt-2">{item.title}</p>
-          </article>
-        ))}
-      </motion.section>
+              {/* Etiqueta: Muy sutil */}
+              <p
+                className="mt-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] opacity-50"
+                style={{ color: theme === "light" ? "#000" : "#fff" }}
+              >
+                {item.title}
+              </p>
+
+              {/* Detalle minimalista: una línea que aparece al cargar */}
+              <motion.div
+                initial={{ width: 0 }}
+                animate={isVisible ? { width: "20px" } : {}}
+                className="h-[2px] mt-4 bg-[var(--primary)] opacity-40"
+              />
+            </motion.article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

@@ -187,7 +187,7 @@ export const projects = [
       "Supabase",
       "React-Icons",
     ],
-    imageUrl: "/img/xhopdit.png",
+    imageUrl: "/img/01.png",
   },
 
   {
@@ -207,27 +207,25 @@ export const projects = [
       "Zod",
       "Axios",
     ],
-    imageUrl: "/img/elite.png",
+    imageUrl: "/img/02.png",
   },
 
   {
     id: 3,
-    title: "The Gym Way",
+    title: "Noir - UI/UI Services",
     descripcion:
-      "This is a minimalist site that efficiently and visually summarizes the most important exersices, which given University local situation can be perfomed by students in order to grow the fit community",
-    url: "https://thegymway.netlify.app/",
+      "Animated website showing UI/UX Services,the client needs to showcase their team's skills in a modern and visually appealing website.",
+    url: "https://noir-uix.vercel.app/",
 
     stack: [
-      "React",
-      "Vite",
+      "Next JS",
+      "Radix UI",
       "TailwindCSS",
-      "Framer Motion",
-      "Mui Material",
+      "Gsap",
       "React-Icons",
     ],
-    imageUrl: "/img/gymway.png",
+    imageUrl: "/img/03.png",
   },
-
   {
     id: 4,
     title: "Harmony Shop",
@@ -245,48 +243,68 @@ export const projects = [
       "React Mouse Follower",
       "React Intersection Observer",
     ],
-    imageUrl: "/img/headphone.png",
+    imageUrl: "/img/04.png",
   },
 
   {
     id: 5,
-    title: "Admin Dashboard #2",
-    descripcion:
-      "Admin dashboard made with React, Vite ,Tailwind and ReCharts. Prove it with username: admin , and password: admin123 .",
-    url: "https://marial2000.github.io/admin_client/",
-    stack: ["React", "Vite", "TailwindCss", "ReCharts", "Lucide-React"],
-    imageUrl: "img/admin1.png",
-  },
-
-  {
-    id: 6,
-    title: "ProteoSearch",
-    descripcion:
-      "ProteoSearch is an advanced web-based platform designed for the interactive visualization and analysis of biomolecular structures. Leveraging real-time 3D rendering, it enables users to explore protein structures in detail, providing an intuitive interface for scientific analysis.",
-    url: "https://marial2000.github.io/ProteinVisual/",
-
-    stack: [
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Canvas, NCBI, UNIPROT API's",
-      "React-Icons",
-    ],
-    imageUrl: "/img/proteosearch.png",
-  },
-
-  {
-    id: 7,
     title: "CRYSPR System",
     descripcion:
       "A bioinformatics application made with Flask (Python) whose objective is to consult genomic data is a brief database in json format, the idea is that the user enters sequences of nitrogenous DNA bases and they are searched in the standard database and in another that contains possible DNA strands that present repairable mutations using the CRISPR Cas9 system. ",
     url: "https://github.com/MariaL2000/CRYSPR_System",
     stack: ["Python", "Flask", "HTML5", "CSS3"],
-    imageUrl: "/img/crispr.png",
+    imageUrl: "/img/11.png",
   },
 
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const projects2 = [
   {
-    id: 8,
+    id: 1,
+    title: "The Gym Way",
+    descripcion:
+      "This is a minimalist site that efficiently and visually summarizes the most important exersices, which given University local situation can be perfomed by students in order to grow the fit community",
+    url: "https://thegymway.netlify.app/",
+
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Framer Motion",
+      "Mui Material",
+      "React-Icons",
+    ],
+    imageUrl: "/img/05.png",
+  },
+
+
+  {
+    id: 2,
     title: "Admin Dashboard",
     descripcion:
       "Scalable, secure, and visually appealing admin dashboard that can manage content, users, media, and analytics efficiently.",
@@ -300,15 +318,43 @@ export const projects = [
       "Django Colorfield",
       "Cloudinary",
     ],
-    imageUrl: "img/djangoadmin.png",
+    imageUrl: "img/06.png",
   },
 
   {
-    id: 9,
+    id: 3,
+    title: "Admin Dashboard #2",
+    descripcion:
+      "Admin dashboard made with React, Vite ,Tailwind and ReCharts. Prove it with username: admin , and password: admin123 .",
+    url: "https://marial2000.github.io/admin_client/",
+    stack: ["React", "Vite", "TailwindCss", "ReCharts", "Lucide-React"],
+    imageUrl: "img/07.png",
+  },
+
+  {
+    id: 4,
+    title: "ProteoSearch",
+    descripcion:
+      "ProteoSearch is an advanced web-based platform designed for the interactive visualization and analysis of biomolecular structures. Leveraging real-time 3D rendering, it enables users to explore protein structures in detail, providing an intuitive interface for scientific analysis.",
+    url: "https://marial2000.github.io/ProteinVisual/",
+
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Canvas, NCBI, UNIPROT API's",
+      "React-Icons",
+    ],
+    imageUrl: "/img/10.png",
+  },
+
+
+  {
+    id: 5,
     title: "Complete FastApi example",
     descripcion:
       "Implementation of a system with Login, Sign in, Logout, a simple Goggle Oauth2 authentication and a CRUD complete for a admin and a econmerce.",
-    url: "https://github.com/MariaL2000/Backendelite/",
+    url: "https://github.com/MariaL2000/allfastapi_dashboard",
     stack: [
       "Python",
       "FastApi",
@@ -318,6 +364,6 @@ export const projects = [
       "SQLAlchemy",
       "Goggle-auth",
     ],
-    imageUrl: "img/fastapi.png",
+    imageUrl: "img/08.png",
   },
 ];
