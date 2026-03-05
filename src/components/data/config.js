@@ -74,6 +74,26 @@ export const skills = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
+    skill: "FastAPI",
+    percentage: 65,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  },
+  {
+    skill: "Django",
+    percentage: 80,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  },
+  {
+    skill: "Java",
+    percentage: 70,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    skill: "Spring Boot",
+    percentage: 50,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/670a611ad1c3e057ee385168d65c8ab27a7e1be5/icons/spring/spring-original.svg",
+  },
+  {
     skill: "HTML",
     percentage: 95,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -88,11 +108,7 @@ export const skills = [
     percentage: 80,
     icon: "https://www.svgrepo.com/show/374118/tailwind.svg",
   },
-  {
-    skill: "Django",
-    percentage: 80,
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-  },
+  
   {
     skill: "React",
     percentage: 80,
@@ -133,11 +149,7 @@ export const skills = [
     percentage: 60,
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },
-  {
-    skill: "FastAPI",
-    percentage: 65,
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-  },
+  
 
   {
     skill: "Blender",
@@ -163,7 +175,7 @@ export const education = [
     id: 1,
     degree: "Engineer & Full Stack Developer",
     institution: "University of Informatic Sciences (UCI), Havana",
-    year: "2021 - Present",
+    year: "2023 - Present",
     details:
       "Currently studying software engineering and obtained an English B2 certification.",
     icon: "./UCI.webp",
@@ -183,7 +195,7 @@ export const projects = [
       "TailwindCSS",
       "Vercel",
       "Gemini AI sdk",
-      "Prisma",
+      "Prisma ORM",
       "Supabase",
       "React-Icons",
     ],
@@ -359,11 +371,11 @@ export const projects2 = [
       "Java ",
       "Spring Boot",
       "Spring Security & JWT",
-      "Spring Data JPA for PostgreSQL / MySQL / H2",
+      "Spring Data JPA for PostgreSQL/MySQL/H2",
       "Cloudinary SDK",
-      "Swagger / OpenAPI 3",
-      "Lombok (Clean code) & Global Exception Handling",
-      "Mockito for testing",
+      "Swagger/OpenAPI 3",
+      "Lombok& Global Exception Handling",
+      "Mockito/testing",
     ],
     imageUrl: "img/09.png",
   },
