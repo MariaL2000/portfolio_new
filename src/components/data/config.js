@@ -333,6 +333,44 @@ export const projects2 = [
 
   {
     id: 4,
+    title: "Complete FastApi example",
+    descripcion:
+      "Implementation of a system with Login, Sign in, Logout, a simple Goggle Oauth2 authentication and a CRUD complete for a admin and a econmerce.",
+    url: "https://github.com/MariaL2000/allfastapi_dashboard",
+    stack: [
+      "Python",
+      "FastApi",
+      "PostgreSQL",
+      "JWT",
+      "Pydantic",
+      "SQLAlchemy",
+      "Goggle-auth",
+    ],
+    imageUrl: "img/08.png",
+  },
+
+  {
+    id: 5,
+    title: "Enterprise Management System API",
+    descripcion:
+      "A robust backend ecosystem developed with Spring Boot 3.5, designed for comprehensive management of human capital, contracts, and business financial flows, it's an implementation of industry-standard security, cloud storage, and a clean architecture.",
+    url: "https://github.com/MariaL2000/java_system.git",
+    stack: [
+      "Java ",
+      "Spring Boot",
+      "Spring Security & JWT",
+      "Spring Data JPA for PostgreSQL / MySQL / H2",
+      "Cloudinary SDK",
+      "Swagger / OpenAPI 3",
+      "Lombok (Clean code) & Global Exception Handling",
+      "Mockito for testing",
+    ],
+    imageUrl: "img/09.png",
+  },
+
+
+  {
+    id: 6,
     title: "ProteoSearch",
     descripcion:
       "ProteoSearch is an advanced web-based platform designed for the interactive visualization and analysis of biomolecular structures. Leveraging real-time 3D rendering, it enables users to explore protein structures in detail, providing an intuitive interface for scientific analysis.",
@@ -349,21 +387,5 @@ export const projects2 = [
   },
 
 
-  {
-    id: 5,
-    title: "Complete FastApi example",
-    descripcion:
-      "Implementation of a system with Login, Sign in, Logout, a simple Goggle Oauth2 authentication and a CRUD complete for a admin and a econmerce.",
-    url: "https://github.com/MariaL2000/allfastapi_dashboard",
-    stack: [
-      "Python",
-      "FastApi",
-      "PostgreSQL",
-      "JWT",
-      "Pydantic",
-      "SQLAlchemy",
-      "Goggle-auth",
-    ],
-    imageUrl: "img/08.png",
-  },
+  
 ];
