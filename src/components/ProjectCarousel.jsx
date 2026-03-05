@@ -29,15 +29,18 @@ const ProjectCarousel = ({ title, data, isFirst = false }) => {
       const scrollAmount = direction === "left" ? -500 : 500;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
+
   };
 
   return (
     <section 
       className="w-full py-6 md:py-8 relative group transition-all duration-500"
+      id="work"
       style={{ 
         // Si no es el primero, eliminamos el margen superior para pegar los carruseles
         marginTop: isFirst ? "0" : "-2rem" 
       }}
+      
     >
       {/* Título con margen reducido para estar cerca de las cards */}
       <div className="px-6 md:px-12 lg:px-20 mb-6">

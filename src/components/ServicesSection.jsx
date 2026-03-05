@@ -15,7 +15,7 @@ export default function ServicesSection() {
         marginTop: "-4rem"
       }}
     >
-      <CustomTitle title="My services" />
+      <CustomTitle title="Services" />
 
       <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 px-6 md:px-12 lg:px-20 mt-4 justify-items-center">
         {services.map((item) => (
